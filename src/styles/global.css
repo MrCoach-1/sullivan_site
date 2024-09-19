@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-sullivan {
+    background-color: rgb(36 2 103);
+}
+
+.text-sullivan {
+    color: rgb(36 2 103);
+}

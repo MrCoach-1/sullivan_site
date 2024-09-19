@@ -1,176 +1,335 @@
 import * as React from "react"
+import { useState } from 'react';
+import Html from "./html"
+import { ClubDeal, CTOasAService, Growth, Health } from "./icons/icons"
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
+const Template = () => {
+  return (<>
+  
+  
+  </>)
 }
 
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
+
+const Hero = () => {
+  return (<>
+  
+    <div id="hero" class="bg-sullivan">
+      <div class="container mx-auto p-4 flex justify-center items-center h-screen">
+        <img src="/static/img/logo.webp" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
+        <img src="/static/img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
+      </div>
+    </div>
+  
+  </>)
 }
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
+
+const Who = () => {
+  return (<>
+  
+    <div id="who" class="bg-white">
+      <div class="container mx-auto py-16">
+        <div class="flex flex-col sm:flex-row">
+
+          <div class="bg-sullivan text-white p-8 sm:w-1/2">
+            <h1 class="text-3xl font-bold leading-tight">
+              Il VC partner per <br />
+              Enablers & <br />
+              Disruptors
+            </h1>
+          </div>
+
+          <div class="bg-white text-sullivan p-8 sm:w-1/2">
+            <p class="text-lg font-extrabold">
+              Sullivan Ventures è una VC-firm italiana specializzata nel supporto a startup early-stage che sviluppano tecnologie che abilitano l'innovazione e che introducono modelli di business, prodotti e servizi innovativi in grado di rivoluzionare il mercato.
+            </p>
+            <p class="text-lg font-extrabold mt-4">
+              La nostra missione è quella di stimolare il cambiamento e l'innovazione attraverso investimenti strategici e attività di mentoring e consulenza di alta qualità, contribuendo così alla crescita sostenibile delle aziende nel nostro portafoglio.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </>)
 }
 
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
 
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
+const services = [
   {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
+    icon: <ClubDeal />, 
+    title: 'Investimento e Club Deal',
+    description: 'Investimento diretto di Sullivan Ventures in equity, anche in club deal'
   },
   {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
+    icon:  <CTOasAService />, 
+    title: 'CTO as-a-Service',
+    description: 'Assistenza nella strategia tecnologica e nello scouting di partner esterni'
   },
   {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
+    icon: <Growth />,
+    title: 'Growth Performance',
+    description: 'Consulenza per definire strategie di crescita, KPI e analisi delle performance'
   },
   {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
+    icon: <ClubDeal />, 
+    title: 'Round Governance',
+    description: 'Supporto per round d\'investimento, due diligence e strategie M&A'
   },
   {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
+    icon: <CTOasAService />, 
+    title: 'Lead Generation',
+    description: 'Affiancamento nella ricerca e nell\'attivazione di clienti e partner strategici'
   },
   {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+    icon: <Growth />,
+    title: 'Investors Network',
+    description: 'Introduzione nel network di investitori partner di Sullivan Ventures'
+  }
+];
 
-const IndexPage = () => {
+const Service = ({ icon, title, description }) => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
+    <div>
+      <div className="flex justify-center">
+        <div className="w-12 h-12" >
+          {icon}
+        </div>
+      </div>
+      
+      <h3 className="text-2xl font-extrabold text-sullivan mt-4">{title}</h3>
+      <p className="text-sullivan text-lg font-extrabold mt-2">{description}</p>
+    </div>
+  );
+};
+
+const What = () => {
+  return (
+    <div id="what" className="container mx-auto py-16 px-4 text-center">
+      <h1 className="text-4xl font-bold text-sullivan">Cosa offriamo</h1>
+      <p className="text-lg text-sullivan mt-4">
+        Investimenti, competenze e servizi che Sullivan Ventures offre per accelerare la crescita delle startup
       </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24 mt-20">
+        {services.map((service, index) => (
+          <Service 
+            key={index}
+            icon={service.icon}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+const sectors = [
+  { name: 'Aerospace', icon: <Health color="#FFFFFF" /> }, 
+  { name: 'Digital Health', icon:  <ClubDeal color="#FFFFFF" />,   }, 
+  { name: 'Proptech', icon: <Health color="#FFFFFF" /> },
+  { name: 'Proptech', icon: <ClubDeal color="#FFFFFF" /> },
+  { name: 'AI & IoT', icon: <Health color="#FFFFFF" /> },
+];
+
+const Sector = ({ name, icon }) => {
+  return (
+    <div className="text-center">
+      <div className="flex justify-center mb-4">
+        <div className="w-12 h-12" >
+          {icon}
+        </div>
+      </div>
+      <p className="text-2xl text-white font-semibold">{name}</p>
+    </div>
+  );
+};
+
+const SectorsGrid = () => {
+  return (
+    <div id="sectors" className="bg-sullivan py-16">
+      <div className="container mx-auto">
+        <h1 className="text-4xl font-bold text-white text-center mb-8">Settori</h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+          {sectors.map((sector, index) => (
+            <Sector key={index} name={sector.name} icon={sector.icon} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+const CallToAction = () => {
+  return (
+    <div id="cta" className="bg-gray-100 py-16">
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
+        
+        {/* Sezione "Candida la tua Startup" */}
+        <div className="bg-white p-8">
+          <h2 className="text-4xl font-bold text-sullivan mb-4">Candida la tua Startup</h2>
+          <p className="text-lg text-sullivan mb-8">
+            Sei una startup early-stage o un imprenditore con un'idea di business e sei in cerca di un partner per crescere?
+          </p>
+          <button className="bg-sullivan text-white px-6 py-3 rounded hover:bg-[#3D2673] transition duration-300">
+            Candidati
+          </button>
+        </div>
+
+        {/* Sezione "Investi con noi" */}
+        <div className="bg-white p-8">
+          <h2 className="text-4xl font-bold text-sullivan mb-4">Investi con noi</h2>
+          <p className="text-lg text-sullivan mb-8">
+            Sei un investitore privato o istituzionale e sei interessato ad entrare a far parte dell'Investors Network di Sullivan Ventures?
+          </p>
+          <button className="bg-sullivan text-white px-6 py-3 rounded hover:bg-[#3D2673] transition duration-300">
+            Contattaci
+          </button>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+const logos = [
+  { name: 'soccerment', src: '/static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
+  { name: 'soccerment', src: '/static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
+
+];
+
+
+const Portfolio = () => {
+
+  return (
+    <div id="portfolio" className="bg-white py-16">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold text-sullivan mb-8">Portfolio</h2>
+
+        <div
+          className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16 overflow-hidden"
+        >
+          {logos.concat(logos).map((logo, index) => (
+            <div key={index} className="flex justify-center items-center w-full ">
+              <a url="{logo.url}">
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="w-full"
+                />
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+const Footer = () => {
+  return (
+    <footer className="bg-sullivan text-white py-8">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        
+        <div className="flex items-center space-x-4 mb-6 md:mb-0">
+          <img
+            src="/static/img/logo_sm.webp" 
+            alt="Sullivan Ventures Logo"
+            className="w-full"
+          />
+        </div>
+
+        <div className="text-center md:text-right space-y-2">
+          <p>(+39) 3405511259</p>
+          <p>info@sullivanventures.it</p>
+          <p>Piazza Giuseppe Massari, 6, 70122 Bari BA, Italy</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+const sections = [
+  { id: 'hero', label: 'Home' },
+  { id: 'who', label: 'Chi siamo' },
+  { id: 'what', label: 'Cosa facciamo' },
+  { id: 'sectors', label: 'Settori' },
+  { id: 'cta', label: 'Candidati' },
+  { id: 'portfolio', label: 'Portfolio' },
+];
+
+
+const StickyNav = ({ sections }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className={`fixed top-4 right-4 p-4 space-y-2 transition-opacity duration-300 ${
+        isHovered ? 'bg-white opacity-100 shadow-lg' : 'bg-transparent opacity-0'
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <h3 className={`font-bold text-lg text-[#1D0C48] ${isHovered ? 'block' : 'hidden'}`}>
+        Navigazione
+      </h3>
+      <ul className="space-y-2">
+        {sections.map((section, index) => (
+          <li key={index}>
+            <button
+              onClick={() => {
+                const sectionElement = document.getElementById(section.id);
+                if (sectionElement) {
+                  sectionElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className={`text-blue-600 hover:underline ${isHovered ? 'block' : 'hidden'}`}
+            >
+              {section.label}
+            </button>
           </li>
         ))}
       </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
+    </div>
+  );
+};
+
+
+const Sections = () => {
+  return (
+    <>
+      <StickyNav sections={sections} />
+      <Hero />
+      <Who />
+      <What />
+      <SectorsGrid />
+      <CallToAction/>
+      <Portfolio />
+      <Footer />
+    </>
+  )
+}
+
+const Head = () => {
+  return (<>
+    <title>Sullivan Ventures</title>
+  </>)
+}
+
+const IndexPage = () => {
+  return (
+    <Html 
+      body={<Sections />}
+      head={<Head />}
+    />
   )
 }
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
