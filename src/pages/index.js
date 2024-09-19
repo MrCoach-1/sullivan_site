@@ -74,7 +74,7 @@ const Who2 = () => {
                 muted
                 playsInline
               >
-                <source src="/video/01.mp4" type="video/mp4" />
+                <source src="video/01.mp4" type="video/mp4" />
                 Il tuo browser non supporta il tag video.
               </video>
               <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
