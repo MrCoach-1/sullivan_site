@@ -57,31 +57,7 @@ const Hero_video_no = () => {
 }
 
 
-
-
-
-      <div className="relative sm:w-1/2 overflow-hidden">
-              <video
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="video/01.mp4" type="video/mp4" />
-                Il tuo browser non supporta il tag video.
-              </video>
-              <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-              <div className="relative z-10 text-white p-8">
-                <h1 className="text-3xl font-bold shadow-lg leading-tight">
-                  Il VC partner per <br />
-                  Enablers & <br />
-                  Disruptors
-                </h1>
-              </div>
-            </div>
-
-const Who = () => {
+const WhoOld = () => {
   return (<>
   
     <div id="who" class="bg-white">
@@ -111,7 +87,7 @@ const Who = () => {
   </>)
 }
 
-const Who2 = () => {
+const Who = () => {
   return (
     <>
       <div id="who" className="bg-white">
@@ -299,7 +275,7 @@ const CallToActionOld = () => {
 const CallToAction = () => {
   return (
     <>
-      <div id="cta" className="bg-gray-100 py-16 relative overflow-hidden">
+      <div id="cta" className="bg-gray-800  py-16 relative overflow-hidden">
         {/* Video di sfondo */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover opacity-50"
@@ -311,7 +287,7 @@ const CallToAction = () => {
 
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 text-center relative z-10">
           {/* Sezione "Candida la tua Startup" */}
-          <div className="bg-white bg-opacity-75 p-8">
+          <div className="bg-white bg-opacity-80 p-8">
             <h2 className="text-4xl font-bold text-sullivan mb-4">
               Candida la tua Startup
             </h2>
@@ -325,7 +301,7 @@ const CallToAction = () => {
           </div>
 
           {/* Sezione "Investi con noi" */}
-          <div className="bg-white bg-opacity-75 p-8">
+          <div className="bg-white bg-opacity-80 p-8">
             <h2 className="text-4xl font-bold text-sullivan mb-4">
               Investi con noi
             </h2>
@@ -454,7 +430,7 @@ const Sections = () => {
     <>
       <StickyNav sections={sections} />
       <Hero />
-      <Who2 />
+      <Who />
       <What />
       <SectorsGrid />
       <CallToAction/>
