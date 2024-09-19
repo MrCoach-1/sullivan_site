@@ -128,6 +128,8 @@ Questo invierà le modifiche a GitHub e pubblicherà la nuova versione del sito.
 
 Vai a `https://<username>.github.io/<repository>/` per vedere il tuo sito pubblicato.
 
+https://mrcoach-1.github.io/sullivan_site/
+
 ### Opzione per i siti personali
 
 Se stai pubblicando il sito nel tuo repository personale (es: `https://<username>.github.io`), segui gli stessi passaggi, ma:
