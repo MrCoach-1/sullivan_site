@@ -250,8 +250,8 @@ const Footer = () => {
         </div>
 
         <div className="text-center md:text-right space-y-2">
-          <p>(+39) 3405511259</p>
-          <p>info@sullivanventures.it</p>
+          <p><a href="tel:+393405511259">(+39) 3405511259</a></p>
+          <p><a href="mailto:info@sullivanventures.it">info@sullivanventures.it</a></p>
           <p>Piazza Giuseppe Massari, 6, 70122 Bari BA, Italy</p>
         </div>
       </div>
