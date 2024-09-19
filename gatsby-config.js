@@ -2,9 +2,10 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: "/sullivan_site",
   siteMetadata: {
-    title: `first_site`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Sullivan Ventures`,
+    siteUrl: `https://MrCoach-1.github.com/sullivan_site`
   },
   plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',

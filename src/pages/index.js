@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useState } from 'react';
-import Html from "./html"
-import { ClubDeal, CTOasAService, Growth, Health } from "./icons/icons"
+import Html from "./../components/html"
+import { ClubDeal, CTOasAService, Growth, Health } from "./../components/icons"
 
 const Template = () => {
   return (<>
