@@ -16,8 +16,8 @@ const Hero = () => {
   
     <div id="hero" class="bg-sullivan">
       <div class="container mx-auto p-4 flex justify-center items-center h-screen">
-        <img src="/static/img/logo.webp" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
-        <img src="/static/img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
+        <img src="static/img/logo.webp" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
+        <img src="static/img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
       </div>
     </div>
   
@@ -197,8 +197,8 @@ const CallToAction = () => {
 };
 
 const logos = [
-  { name: 'soccerment', src: '/static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
-  { name: 'soccerment', src: '/static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
+  { name: 'soccerment', src: 'static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
+  { name: 'soccerment', src: 'static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
 
 ];
 
@@ -239,7 +239,7 @@ const Footer = () => {
         
         <div className="flex items-center space-x-4 mb-6 md:mb-0">
           <img
-            src="/static/img/logo_sm.webp" 
+            src="static/img/logo_sm.webp" 
             alt="Sullivan Ventures Logo"
             className="w-full"
           />
