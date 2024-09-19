@@ -20,8 +20,8 @@ const Hero = () => {
   
     <div id="hero" class="bg-sullivan">
       <div class="container mx-auto p-4 flex justify-center items-center h-screen">
-        <img src="static/img/logo.webp" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
-        <img src="static/img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
+        <img src="img/logo.webp" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
+        <img src="img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
       </div>
     </div>
   
@@ -58,6 +58,50 @@ const Who = () => {
   
   </>)
 }
+
+const Who2 = () => {
+  return (
+    <>
+      <div id="who" className="bg-white">
+        <div className="container mx-auto py-16">
+          <div className="flex flex-col sm:flex-row relative">
+            {/* Box di sinistra con sfondo video */}
+            <div className="relative sm:w-1/2 overflow-hidden">
+              <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/video/01.mp4" type="video/mp4" />
+                Il tuo browser non supporta il tag video.
+              </video>
+              <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+              <div className="relative z-10 text-white p-8">
+                <h1 className="text-3xl font-bold shadow-lg leading-tight">
+                  Il VC partner per <br />
+                  Enablers & <br />
+                  Disruptors
+                </h1>
+              </div>
+            </div>
+
+            {/* Box di destra */}
+            <div className="bg-white text-sullivan p-8 sm:w-1/2">
+              <p className="text-lg font-extrabold">
+                Sullivan Ventures è una VC-firm italiana specializzata nel supporto a startup early-stage che sviluppano tecnologie che abilitano l'innovazione e che introducono modelli di business, prodotti e servizi innovativi in grado di rivoluzionare il mercato.
+              </p>
+              <p className="text-lg font-extrabold mt-4">
+                La nostra missione è quella di stimolare il cambiamento e l'innovazione attraverso investimenti strategici e attività di mentoring e consulenza di alta qualità, contribuendo così alla crescita sostenibile delle aziende nel nostro portafoglio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
 
 const services = [
@@ -201,8 +245,8 @@ const CallToAction = () => {
 };
 
 const logos = [
-  { name: 'soccerment', src: 'static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
-  { name: 'soccerment', src: 'static/loghi/soccerment__.png', url: "https://soccerment.com/" }, 
+  { name: 'soccerment', src: 'loghi/soccerment__.png', url: "https://soccerment.com/" }, 
+  { name: 'soccerment', src: 'loghi/soccerment__.png', url: "https://soccerment.com/" }, 
 
 ];
 
@@ -243,7 +287,7 @@ const Footer = () => {
         
         <div className="flex items-center space-x-4 mb-6 md:mb-0">
           <img
-            src="static/img/logo_sm.webp" 
+            src="img/logo_sm.webp" 
             alt="Sullivan Ventures Logo"
             className="w-full"
           />
@@ -310,7 +354,7 @@ const Sections = () => {
     <>
       <StickyNav sections={sections} />
       <Hero />
-      <Who />
+      <Who2 />
       <What />
       <SectorsGrid />
       <CallToAction/>
