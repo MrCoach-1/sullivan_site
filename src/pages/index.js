@@ -418,7 +418,7 @@ const StickyNav = ({ sections }) => {
 
   return (
     <div
-      className={`fixed top-4 right-4 p-4 space-y-2 transition-opacity duration-300 ${
+      className={`fixed z-50 top-4 right-4 p-4 space-y-2 transition-opacity duration-300 ${
         isHovered ? 'bg-white opacity-100 shadow-lg' : 'bg-transparent opacity-0'
       }`}
       onMouseEnter={() => setIsHovered(true)}
