@@ -1,7 +1,11 @@
 import * as React from "react"
 import { useState } from 'react';
 import Html from "./../components/html"
-import { ClubDeal, CTOasAService, Growth, Health } from "./../components/icons"
+import { ClubDeal, CTOasAService, Growth, Health, 
+  InvestmentClubDealIcon, CTOAsAServiceIcon, GrowthPerformanceIcon,
+  RoundGovernanceIcon, LeadGenerationIcon, InvestorsNetworkIcon,
+  AerospaceIcon, DigitalHealthIcon, ArtificialIntelligenceIcon, ProptechIcon, IoTIcon
+} from "./../components/icons"
 
 const Template = () => {
   return (<>
@@ -58,32 +62,32 @@ const Who = () => {
 
 const services = [
   {
-    icon: <ClubDeal />, 
+    icon: <InvestmentClubDealIcon />, 
     title: 'Investimento e Club Deal',
     description: 'Investimento diretto di Sullivan Ventures in equity, anche in club deal'
   },
   {
-    icon:  <CTOasAService />, 
+    icon:  <CTOAsAServiceIcon />, 
     title: 'CTO as-a-Service',
     description: 'Assistenza nella strategia tecnologica e nello scouting di partner esterni'
   },
   {
-    icon: <Growth />,
+    icon: <GrowthPerformanceIcon />,
     title: 'Growth Performance',
     description: 'Consulenza per definire strategie di crescita, KPI e analisi delle performance'
   },
   {
-    icon: <ClubDeal />, 
+    icon: <RoundGovernanceIcon />, 
     title: 'Round Governance',
     description: 'Supporto per round d\'investimento, due diligence e strategie M&A'
   },
   {
-    icon: <CTOasAService />, 
+    icon: <LeadGenerationIcon />, 
     title: 'Lead Generation',
     description: 'Affiancamento nella ricerca e nell\'attivazione di clienti e partner strategici'
   },
   {
-    icon: <Growth />,
+    icon: <InvestorsNetworkIcon />,
     title: 'Investors Network',
     description: 'Introduzione nel network di investitori partner di Sullivan Ventures'
   }
@@ -127,11 +131,11 @@ const What = () => {
 }
 
 const sectors = [
-  { name: 'Aerospace', icon: <Health color="#FFFFFF" /> }, 
-  { name: 'Digital Health', icon:  <ClubDeal color="#FFFFFF" />,   }, 
-  { name: 'Proptech', icon: <Health color="#FFFFFF" /> },
-  { name: 'Proptech', icon: <ClubDeal color="#FFFFFF" /> },
-  { name: 'AI & IoT', icon: <Health color="#FFFFFF" /> },
+  { name: 'Aerospace', icon: <AerospaceIcon color="#FFFFFF" /> }, 
+  { name: 'Digital Health', icon:  <DigitalHealthIcon color="#FFFFFF" />,   }, 
+  { name: 'Property Tech', icon:  <ProptechIcon color="#FFFFFF" />,   },   
+  { name: 'Artificial Intelligence', icon: <ArtificialIntelligenceIcon color="#FFFFFF" /> },
+  { name: 'IoT', icon: <IoTIcon color="#FFFFFF" /> },
 ];
 
 const Sector = ({ name, icon }) => {
