@@ -20,7 +20,7 @@ const Hero = () => {
   
     <div id="hero" class="bg-sullivan">
       <div class="container mx-auto p-4 flex justify-center items-center h-screen">
-        <img src="img/logo.webp" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
+        <img src="img/logo_alpha.png" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
         <img src="img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
       </div>
     </div>
@@ -28,6 +28,58 @@ const Hero = () => {
   </>)
 }
 
+const Hero_video_no = () => {
+  return (<>
+  
+    <div id="hero" class="bg-sullivan">
+      <div class="container mx-auto p-4 flex justify-center items-center h-screen overflow-hidden">
+
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="video/02.mp4" type="video/mp4" />
+          Il tuo browser non supporta il tag video.
+        </video>
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+        <div className="relative z-10 text-white p-8">
+          <img src="img/logo_alpha.png" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
+          <img src="img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
+        </div>
+
+      </div>
+    </div>
+  
+  </>)
+}
+
+
+
+
+
+      <div className="relative sm:w-1/2 overflow-hidden">
+              <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="video/01.mp4" type="video/mp4" />
+                Il tuo browser non supporta il tag video.
+              </video>
+              <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+              <div className="relative z-10 text-white p-8">
+                <h1 className="text-3xl font-bold shadow-lg leading-tight">
+                  Il VC partner per <br />
+                  Enablers & <br />
+                  Disruptors
+                </h1>
+              </div>
+            </div>
 
 const Who = () => {
   return (<>
@@ -212,7 +264,7 @@ const SectorsGrid = () => {
 };
 
 
-const CallToAction = () => {
+const CallToActionOld = () => {
   return (
     <div id="cta" className="bg-gray-100 py-16">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
@@ -243,6 +295,54 @@ const CallToAction = () => {
     </div>
   );
 };
+
+const CallToAction = () => {
+  return (
+    <>
+      <div id="cta" className="bg-gray-100 py-16 relative overflow-hidden">
+        {/* Video di sfondo */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-50"
+          src="video/02.mp4"
+          autoPlay
+          loop
+          muted
+        />
+
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 text-center relative z-10">
+          {/* Sezione "Candida la tua Startup" */}
+          <div className="bg-white bg-opacity-75 p-8">
+            <h2 className="text-4xl font-bold text-sullivan mb-4">
+              Candida la tua Startup
+            </h2>
+            <p className="text-lg text-sullivan mb-8">
+              Sei una startup early-stage o un imprenditore con un'idea di
+              business e sei in cerca di un partner per crescere?
+            </p>
+            <button className="bg-sullivan text-white px-6 py-3 rounded hover:bg-[#3D2673] transition duration-300">
+              Candidati
+            </button>
+          </div>
+
+          {/* Sezione "Investi con noi" */}
+          <div className="bg-white bg-opacity-75 p-8">
+            <h2 className="text-4xl font-bold text-sullivan mb-4">
+              Investi con noi
+            </h2>
+            <p className="text-lg text-sullivan mb-8">
+              Sei un investitore privato o istituzionale e sei interessato ad
+              entrare a far parte dell'Investors Network di Sullivan Ventures?
+            </p>
+            <button className="bg-sullivan text-white px-6 py-3 rounded hover:bg-[#3D2673] transition duration-300">
+              Contattaci
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
 
 const logos = [
   { name: 'soccerment', src: 'loghi/soccerment__.png', url: "https://soccerment.com/" }, 
