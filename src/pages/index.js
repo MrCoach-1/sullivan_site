@@ -308,6 +308,7 @@ const StickyNav = ({ sections }) => {
 const Sections = () => {
   return (
     <>
+      <h1>TEST</h1>
       <StickyNav sections={sections} />
       <Hero />
       <Who />
