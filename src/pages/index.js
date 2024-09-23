@@ -240,7 +240,7 @@ const SectorsGrid = () => {
 };
 
 
-const CallToActionOld = () => {
+const CallToAction = () => {
   return (
     <div id="cta" className="bg-gray-100 py-16">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 text-center">
@@ -272,7 +272,7 @@ const CallToActionOld = () => {
   );
 };
 
-const CallToAction = () => {
+const CallToActionVideo = () => {
   return (
     <>
       <div id="cta" className="bg-gray-800  py-16 relative overflow-hidden">
