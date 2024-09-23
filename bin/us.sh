@@ -10,3 +10,5 @@ git push origin main
 
 
 
+open https://mrcoach-1.github.io/sullivan_site/
+
