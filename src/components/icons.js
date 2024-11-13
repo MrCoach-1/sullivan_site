@@ -109,7 +109,7 @@ export const Health = ({ color = "rgb(36 2 103)", className = "w-12 h-12" }) => 
 
 export const InvestmentClubDealIcon = ({ color = "rgb(36 2 103)", className = "w-12 h-12" }) => {
   return (
-    <img src='icons/what/investimento.svg' style={{ filter: 'invert(20%) sepia(80%) saturate(300%) hue-rotate(180deg)' }} alt="icon" />
+    <img src='icons/what/Investimento.svg' style={{ filter: 'invert(20%) sepia(80%) saturate(300%) hue-rotate(180deg)' }} alt="icon" />
   );
 };
 
