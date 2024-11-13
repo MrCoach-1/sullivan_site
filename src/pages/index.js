@@ -1,11 +1,14 @@
 import * as React from "react"
 import { useState } from 'react';
 import Html from "./../components/html"
-import { ClubDeal, CTOasAService, Growth, Health, 
+import {
   InvestmentClubDealIcon, CTOAsAServiceIcon, GrowthPerformanceIcon,
   RoundGovernanceIcon, LeadGenerationIcon, InvestorsNetworkIcon,
   AerospaceIcon, DigitalHealthIcon, ArtificialIntelligenceIcon, ProptechIcon, IoTIcon
 } from "./../components/icons"
+
+
+
 
 const Template = () => {
   return (<>
@@ -20,8 +23,8 @@ const Hero = () => {
   
     <div id="hero" class="bg-sullivan">
       <div class="container mx-auto p-4 flex justify-center items-center h-screen">
-        <img src="img/logo_alpha.png" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
-        <img src="img/logo_sm.webp" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
+        <img src="img/hidef/Color logo - no background.svg" alt="Sullivan Ventures Desktop" class="hidden sm:block max-w-full h-auto" />
+        <img src="img/hidef/Color logo - no background.svg" alt="Sullivan Ventures Mobile" class="block sm:hidden max-w-full h-auto" />
       </div>
     </div>
   
@@ -117,10 +120,10 @@ const Who = () => {
 
             {/* Box di destra */}
             <div className="bg-white text-sullivan p-8 sm:w-1/2">
-              <p className="text-lg font-extrabold">
+              <p className="text-lg font-bold">
                 Sullivan Ventures è una VC-firm italiana specializzata nel supporto a startup early-stage che sviluppano tecnologie che abilitano l'innovazione e che introducono modelli di business, prodotti e servizi innovativi in grado di rivoluzionare il mercato.
               </p>
-              <p className="text-lg font-extrabold mt-4">
+              <p className="text-lg font-bold mt-4">
                 La nostra missione è quella di stimolare il cambiamento e l'innovazione attraverso investimenti strategici e attività di mentoring e consulenza di alta qualità, contribuendo così alla crescita sostenibile delle aziende nel nostro portafoglio.
               </p>
             </div>
@@ -321,13 +324,16 @@ const CallToActionVideo = () => {
 
 
 const logos = [
-  { name: 'soccerment', src: 'loghi/soccerment__.png', url: "https://soccerment.com/" }, 
-  { name: 'soccerment', src: 'loghi/soccerment__.png', url: "https://soccerment.com/" }, 
-
+  { name: 'Clean Cooking Tech', src: 'loghi/Clean cooking tech.png', url: "#" }, 
+  { name: 'Immobiliallasta', src: 'loghi/immobiliallasta.webp', url: "#" }, 
+  { name: 'Lilac DCA', src: 'loghi/lilac_DCA.png', url: "#" }, 
+  { name: 'Wayla', src: 'loghi/Logo Wayla_bucato.png', url: "#" }, 
+  { name: 'Soccerment', src: 'loghi/soccerment.png', url: "#" }, 
+  { name: 'Space X', src: 'loghi/spacex.png', url: "#" }, 
 ];
 
 
-const Portfolio = () => {
+const Portfolio_old= () => {
 
   return (
     <div id="portfolio" className="bg-white py-16">
@@ -335,12 +341,13 @@ const Portfolio = () => {
         <h2 className="text-4xl font-bold text-sullivan mb-8">Portfolio</h2>
 
         <div
-          className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-16 overflow-hidden"
+          className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 overflow-hidden"
         >
           {logos.concat(logos).map((logo, index) => (
             <div key={index} className="flex justify-center items-center w-full ">
               <a url="{logo.url}">
                 <img
+                  style={{ filter: 'invert(80%) sepia(80%) saturate(700%) hue-rotate(180deg)' }}
                   src={logo.src}
                   alt={logo.name}
                   className="w-full"
@@ -354,6 +361,33 @@ const Portfolio = () => {
   );
 };
 
+const Portfolio = () => {
+
+  return (
+    <div id="portfolio" className="bg-white py-16">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-bold text-sullivan mb-8">Portfolio</h2>
+
+        <div
+          className="container mx-auto flex flex-wrap justify-around items-center gap-8"
+        >
+          {logos.map((logo, index) => (
+            <div key={index} className="h-16 grayscale opacity-60 hover:opacity-100 transition duration-300">
+              <a url="{logo.url}">
+                <img
+                  className="h-16 grayscale opacity-60 hover:opacity-100 transition duration-300"
+                  style={{ filter: 'invert(80%) sepia(80%) saturate(700%) hue-rotate(180deg)' }}
+                  src={logo.src}
+                  alt={logo.name}
+                />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 
 const Footer = () => {
